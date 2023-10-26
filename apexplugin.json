@@ -1,6 +1,6 @@
 {
   "name": "Playing Cards",
-  "version": "23.2.1",
+  "version": "1.0",
   "description": "Visualization of playing cards, with built-in support for card flipping and customizing card images.",
   "keywords": ["playing card","card game"],
   "homepage": "https://github.com/wileebgd/apex-playing-cards",
