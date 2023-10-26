@@ -1,0 +1,35 @@
+{
+  "name": "Playing Cards",
+  "version": "23.2.1",
+  "description": "Visualization of playing cards, with built-in support for card flipping and customizing card images.",
+  "keywords": ["playing card","card game"],
+  "homepage": "https://github.com/wileebgd/apex-playing-cards",
+  "bugs": {
+    "url": "https://github.com/wileebgd/apex-playing-cards/issues",
+    "email": "velimir.corovic@gmail.com"
+  },
+  "license": "MIT",
+  "commercial": "No",
+  "author": {
+    "name": "Velimir Corovic",
+    "email": "velimir.corovic@gmail.com",
+    "url": "",
+    "twitter": "VelimirCorovic",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wileebgd/apex-playing-cards.git"
+  },
+  "oracle": {
+    "versions": ["23.1.0", "19.1.0"],
+    "apex": {
+      "versions": ["23.1.0"],
+      "plugin": {
+        "internalName": "DEV.VELIMIR.PLAYING_CARD",
+        "type": "template component",
+        "demo": "https://apex.oracle.com/pls/apex/r/velimir_ws/template-components-cards/",
+        "previewImage": "https://raw.githubusercontent.com/wileebgd/apex-playing-cards/main/assets/PlayingCards.gif?raw=true"
+      }
+    }
+  }
+}
