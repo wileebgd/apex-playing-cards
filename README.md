@@ -24,9 +24,9 @@ The plugin can be used either within standard regions or within Interactive repo
 | Suit                                    | Column within the corresponding query that will return SUIT value. Valid values for data with this column are: 'diams', 'clubs', 'hearts' and 'spades'.                                                                 |
 | Value                                   | Column within the corresponding query that will return numeric VALUE. Valid values for data with this column are numbers from 1 to 14, excluding number 11.                                                             |
 | Item to hold the array of flipped cards | Page item that will hold the array of flipped cards. Each element of the array will contain the flipped card suit and value, and if cards are not part of the IR, it will contain the flipped card order number as well.|
-| Static file to hold the Jack image      | Path to the static file containing the card image for Jack. If not provided, the generic letter J will be shown.                                                                                                        |
-| Static file to hold the Queen image     | Path to the static file containing the card image for Queen. If not provided, the generic letter Q will be shown.                                                                                                       |
-| Static file to hold the King image      | Path to the static file containing the card image for King. If not provided, the generic letter K will be shown.                                                                                                        |
+| Static file to hold the Jack image      | Path to the static file containing the card image for Jack. If not provided, the generic letter J will be shown. Example: "#APP_FILES#images/jack.gif"                                                                  |
+| Static file to hold the Queen image     | Path to the static file containing the card image for Queen. If not provided, the generic letter Q will be shown. Example: "#APP_FILES#images/queen.gif"                                                                |
+| Static file to hold the King image      | Path to the static file containing the card image for King. If not provided, the generic letter K will be shown. Example: "#APP_FILES#images/king.gif"                                                                  |
 
 
 ## Demo Application
