@@ -33,7 +33,7 @@ prompt APPLICATION 298991 - Template Components - Cards
 -- Application Export:
 --   Application:     298991
 --   Name:            Template Components - Cards
---   Date and Time:   09:00 Thursday October 26, 2023
+--   Date and Time:   08:00 Monday October 30, 2023
 --   Exported By:     VELIMIR.COROVIC@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Component Export
@@ -64,12 +64,12 @@ wwv_flow_imp_shared.create_plugin(
 '{if APEX$IS_LAZY_LOADING/}',
 '    <div class="card back">',
 '    </div>    ',
-'{else/}',
+'{else/}  ',
 '    <script>',
 '        if (typeof flipped === ''undefined'') {',
 '            var flipped = [];',
 '        }',
-'    </script>    ',
+'    </script>',
 '    <div class="card" onclick="flipCard($(this), ''#VALUE#'', ''#SUIT#'', #ARRAY_ITEM#);">',
 '        {case VALUE/}{when 0/}<div class="front" style="visibility:hidden;"></div></div>',
 '        {otherwise/}',
@@ -226,7 +226,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_help_text=>'Column within the corresponding query that will return SUIT value. Valid values for data with this column are: ''diams'', ''clubs'', ''hearts'' and ''spades''.'
+,p_help_text=>'Substitution string referencing query column that will return SUIT value. Valid values for data with this column are: ''diams'', ''clubs'', ''hearts'' and ''spades''. For example: &SUIT.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
  p_id=>wwv_flow_imp.id(77436719294643544738)
@@ -240,7 +240,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_help_text=>'Column within the corresponding query that will return numeric VALUE. Valid values for data with this column are numbers from 1 to 14, excluding number 11.'
+,p_help_text=>'Substitution string referencing query column that will return numeric VALUE. Valid values for data with this column are numbers from 1 to 14, excluding number 11. For example: &VALUE.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
  p_id=>wwv_flow_imp.id(77555110782751550217)
@@ -254,7 +254,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_help_text=>'Page item that will hold the array of flipped cards. Each element of the array will contain the flipped card suit and value, and if cards are not part of the IR, it will contain the flipped card order number as well.'
+,p_help_text=>'Page item that will hold the array of flipped cards. Each element of the array will contain the flipped card suit and value, and if cards are not part of the IR, it will contain the flipped card order number as well. For example: P1_FLIPPED.'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
  p_id=>wwv_flow_imp.id(55340490552581782)
@@ -268,7 +268,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_help_text=>'Path to the static file containing the card image for Jack. If not provided, the generic letter J will be shown.'
+,p_help_text=>'Path to the static file containing the card image for Jack. If not provided, the generic letter J will be shown. For example: #APP_FILES#images/jack.gif'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
  p_id=>wwv_flow_imp.id(55340710943582852)
@@ -282,7 +282,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_help_text=>'Path to the static file containing the card image for Queen. If not provided, the generic letter Q will be shown.'
+,p_help_text=>'Path to the static file containing the card image for Queen. If not provided, the generic letter Q will be shown. #APP_FILES#images/queen.gif'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
  p_id=>wwv_flow_imp.id(55341007905583585)
@@ -296,7 +296,7 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_help_text=>'Path to the static file containing the card image for King. If not provided, the generic letter K will be shown.'
+,p_help_text=>'Path to the static file containing the card image for King. If not provided, the generic letter K will be shown. For example: #APP_FILES#images/king.gif'
 );
 end;
 /
