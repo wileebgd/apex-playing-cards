@@ -23,7 +23,7 @@
   "oracle": {
     "versions": ["23.1.0", "19.1.0"],
     "apex": {
-      "versions": ["23.1.0"],
+      "versions": ["23.2.0", "23.1.0"],
       "plugin": {
         "internalName": "DEV.VELIMIR.PLAYING_CARD",
         "type": "template component",
